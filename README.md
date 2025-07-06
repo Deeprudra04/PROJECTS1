@@ -5,57 +5,64 @@ I am an engineering student who loves technology and new ideas. I have practical
 
 🔧 I love building intelligent hardware and software systems that can solve real-world problems. From autonomous drones navigating Mars-like terrains to AI-powered security systems, I’m constantly working on exciting, hands-on innovations.
 
----
+# 🚗 Bluetooth Controlled Car
 
-## 🚀 Projects & Hackathons
-
-### 🛰️ IRoC-U 2025 | ISRO Robotics Challenge (Team GARUNVEER)
-- Developed an autonomous drone navigation system for Mars-like terrain (no GPS).
-- Technologies used: **Pixhawk 2.4.8**, **Raspberry Pi 4B**, **MAVProxy**, **Ultrasonic Sensors**, **PID Control**.
-
-### 📦 e-Yantra 2024 – Warehouse Drone
-- Built a drone system for warehouse mapping and package detection using **ROS2**, **CRSF protocol**, and **WhyCon** localization.
-
-### 🔐 Smart Security Locking System
-- Created an IoT-based security lock using **ESP32-CAM**, Android app, and **SMTP** for unauthorized access alerts.
-- Designed a real-time Flask + Socket.IO dashboard with local CSV logging.
-
-### 🎮 Bluetooth Controlled Car
-- Built a car controlled via a custom Android app using **UART communication** and **Arduino Uno + HC-05** module.
-
-### 🎨 Air Canvas Drawing
-- Built a real-time drawing interface using OpenCV and Python with coloured object tracking and dynamic HSV GUI.
-
-### 💡 FPGA Digital Circuits
-- Designed combinational and sequential circuits using **Verilog**, simulated and verified in **Xilinx Vivado**.
+This project demonstrates a Bluetooth-controlled car built using an **Arduino Uno**, **HC-05 Bluetooth module**, and an **L298N motor driver**. It allows users to control the movement of the car wirelessly using a smartphone app, showcasing a practical application of embedded systems, wireless communication, and robotics.
 
 ---
 
-## 💻 Technical Skills
+## 🔧 Features
 
-- **Languages:** Python, C, Verilog, Bash, Assembly (8085, 8086, 8051)  
-- **Embedded Platforms:** Arduino, ESP32, Raspberry Pi, Pixhawk  
-- **Frameworks & Tools:** ROS2, OpenCV, TensorFlow, Scikit-learn, Xilinx Vivado, MATLAB  
-- **Simulation & Design:** Proteus, KiCad, Cadence Virtuoso, Wokwi, Tinkercad  
-- **Design Tools:** Adobe Photoshop, Illustrator  
-- **Protocols:** MAVLink, CRSF, UART, I2C, SMTP
-
----
-
-## 🧠 Certifications
-
-- **Quantum Computing Fundamentals** – CDAC & IIT Roorkee (May 2025)  
-- **IBM SkillsBuild Summer PBL Program** (July 2025)
+- **Wireless Bluetooth Control** via HC-05 module.
+- **Arduino Uno** microcontroller as the control unit.
+- **L298N Motor Driver** to manage dual DC motors.
+- **Bidirectional movement**: Forward, Backward, Left, Right, and diagonal movement.
+- **Speed control** using predefined levels.
+- **Compact, lightweight design**.
+- **User-friendly app interface** for control.
+- **Educational value** for learners in embedded systems, robotics, and IoT.
 
 ---
 
-## 👨‍💻 Experience
+## 📦 Components Used
 
-### 🛠️ KGEC Robotics Society (Mar 2024 – Present)
-- Mentored junior interns, conducted IoT workshops, and worked on drone/Mars rover projects.
+| Component                   | Quantity |
+|----------------------------|----------|
+| 300 RPM DC Gear Motor      | 4        |
+| Wheels                     | 4        |
+| Cardboard Chassis          | 1        |
+| Arduino UNO                | 1        |
+| HC-05 Bluetooth Module     | 1        |
+| 3.7V Rechargeable Li-ion Battery | 3 (in series) |
+| L298N Motor Driver         | 1        |
+| Male/Female Jumper Wires   | 19       |
+| Breadboard (400 pts)       | 1        |
+| Arduino IDE (Software)     | 1        |
+| Bluetooth Control App      | 1        |
 
-### 🌐 ADAOVI Technology (Jan 2024 – Mar 2024)
-- Interned in a full-stack ML program: worked on projects like **lung cancer detection (CNN)**, **salary regression**, and **survival prediction**.
+---
+
+## ⚙️ Circuit Connections
+
+### Motor Driver (L298N) → Arduino:
+- IN1 → Pin 5  
+- IN2 → Pin 6  
+- IN3 → Pin 10  
+- IN4 → Pin 11
+
+### Bluetooth Module (HC-05) → Arduino:
+- VCC → 5V  
+- GND → GND  
+- TX → RX (Pin 0)  
+- RX → TX (Pin 1)
+
+### Power:
+- Li-ion battery pack (connected in series) supplies power via `Vin`.
+
+---
+
+## 💻 Arduino Code (File Given)
+
+The Arduino listens for characters sent from the Bluetooth app and performs movement accordingly:
 
 
-> “Inventing the future—one robot, one line of code at a time.”
