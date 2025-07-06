@@ -56,15 +56,5 @@
 ### 🌐 ADAOVI Technology (Jan 2024 – Mar 2024)
 - Interned in a full-stack ML program: worked on projects like **lung cancer detection (CNN)**, **salary regression**, and **survival prediction**.
 
----
-
-## 📫 Let’s Connect!
-
-- 📍 Location: Kharagpur, West Bengal  
-- 🔗 [LinkedIn](https://linkedin.com/in/your-link)  
-- 💻 [GitHub](https://github.com/your-github-handle)  
-- ✉️ Email: your.email@example.com  
-
----
 
 > “Inventing the future—one robot, one line of code at a time.”
